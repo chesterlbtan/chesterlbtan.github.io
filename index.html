@@ -1,117 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>The International 10 - Statistics</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="icon" type="image/x-ico" href="favicon.ico"/>
-    <link rel="stylesheet" href="application.css"/>
-    <link rel="stylesheet" href="bootstrap.css"/>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-</head>
-<body>
-    <script type="text/javascript" src="application.js"></script>
-    <div class="container-fluid" style="padding-left: 5%; padding-right: 5%; padding-top: 2em;">
-        <div class="row justify-content-center">
-            <h2>The International 2021</h2>
-            <span id="data_url" style="display: none;">https://chesterlbtan.github.io/gamedata.json</span>
-        </div>
-        <div class="row justify-content-center">
-            <h6>last update on 30 October 2021, 12:45am +8</h6>
-        </div>
-        <div class="container tab">
-            <button class="tablinks" onclick="openTab(event, 'Game')" id="gametab">Game</button>
-            <button class="tablinks" onclick="openTab(event, 'Teams')">Teams</button>
-            <button class="tablinks" onclick="openTab(event, 'Players')">Players</button>
-            <button class="tablinks" onclick="openTab(event, 'Heroes')">Heroes</button>
-        </div>
-        <div id="Game" class="container tabcontent">
-            <h3>Game</h3>
-        </div>
-        <div id="Teams" class="container tabcontent">
-            <h3>Teams</h3>
-            <div class="row">
-                <span class="cat-header">Team Stats</span>
-                <table class="js-sort-table" id="team_avg_stats">
-                    <thead>
-                        <tr>
-                            <th>Logo</th>
-                            <th>Team</th>
-                            <th class="js-sort-number">NoOfGames</th>
-                            <th class="js-sort-number">Wins</th>
-                            <th class="js-sort-number">Losses</th>
-                            <th class="js-sort-number">WinRate</th>
-                            <th class="js-sort-number">Kills</th>
-                            <th class="js-sort-number">Deaths</th>
-                            <th class="js-sort-number">Duration</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-            <div class="row">
-                <span class="cat-header">Game's Highs/Lows</span>
-
-                <div class="col-6">
-                    <table class="js-sort-table" id="team_kills" style="display: block; overflow-y: scroll; height: 530px;">
-                        <span class="cat-header">Kills</span>
-                        <thead>
-                            <tr>
-                                <th>Logo</th>
-                                <th>Team</th>
-                                <th class="js-sort-number">Kills</th>
-                                <th>Date</th>
-                                <th>Enemy</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div class="col-6">
-                    <table class="js-sort-table" id="team_duration" style="display: block; overflow-y: scroll; height: 530px;">
-                        <span class="cat-header">Game's Duration</span>
-                        <thead>
-                            <tr>
-                                <th>Radiant</th>
-                                <th>Team</th>
-                                <th>Team</th>
-                                <th>Dire</th>
-                                <th class="js-sort-number">Duration</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            </div>
-
-        <div class="container">
-
-            <table>
-                <span class="cat-header">Top Assists</span>
-    <thead><tr><th>Logo</th><th>Team</th><th>Assists</th><th>Date</th><th>Enemy</th></tr></thead>
-    <tbody><tr><td><img src="https://cdn.datdota.com/images/1740069961068193325.png" width="45" height="27"></td><td>Virtus.pro</td><td>144</td><td>Fri Oct  8 01:33:46 2021</td><td>OG</td></tr><tr><td><img src="https://cdn.datdota.com/images/1619596767758664453.png" width="45" height="27"></td><td>Undying</td><td>136</td><td>Sat Oct  9 15:02:56 2021</td><td>Alliance</td></tr><tr><td><img src="https://cdn.datdota.com/images/772866954983282781.png" width="45" height="27"></td><td>Fnatic</td><td>132</td><td>Sat Oct  9 19:04:49 2021</td><td>beastcoast</td></tr><tr><td><img src="https://cdn.datdota.com/images/987883915862592200.png" width="45" height="27"></td><td>Team Secret</td><td>126</td><td>Tue Oct 12 20:18:35 2021</td><td>OG</td></tr><tr><td><img src="https://cdn.datdota.com/images/1773822957617535601.png" width="45" height="27"></td><td>Team Spirit</td><td>122</td><td>Fri Oct 15 15:10:58 2021</td><td>OG</td></tr></tbody>
-
-            </table>
-
-            <table>
-                <span class="cat-header">Teams with Most Unique Heroes</span>
-    <thead><tr><th>Logo</th><th>Team</th><th>Hero_Count</th></tr></thead>
-    <tbody><tr><td><img src="https://cdn.datdota.com/images/1773822957617535601.png" width="45" height="27"></td><td>Team Spirit</td><td>60</td></tr><tr><td><img src="https://cdn.datdota.com/images/987883915862592200.png" width="45" height="27"></td><td>Team Secret</td><td>58</td></tr><tr><td><img src="https://cdn.datdota.com/images/1768194395980560504.png" width="45" height="27"></td><td>PSG.LGD</td><td>56</td></tr><tr><td><img src="https://cdn.datdota.com/images/1673617129954032824.png" width="45" height="27"></td><td>Quincy Crew</td><td>53</td></tr><tr><td><img src="https://cdn.datdota.com/images/845963870798027729.png" width="45" height="27"></td><td>Vici Gaming</td><td>52</td></tr><tr><td><img src="https://cdn.datdota.com/images/1684898053518612571.png" width="45" height="27"></td><td>Thunder Predator</td><td>52</td></tr><tr><td><img src="https://cdn.datdota.com/images/772866954983282781.png" width="45" height="27"></td><td>Fnatic</td><td>50</td></tr><tr><td><img src="https://cdn.datdota.com/images/1629730253163462144.png" width="45" height="27"></td><td>Team Aster</td><td>49</td></tr><tr><td><img src="https://cdn.datdota.com/images/1658977260140178019.png" width="45" height="27"></td><td>T1</td><td>48</td></tr><tr><td><img src="https://cdn.datdota.com/images/1662356550778267512.png" width="45" height="27"></td><td>SG esports</td><td>47</td></tr><tr><td><img src="https://cdn.datdota.com/images/1664609440937553639.png" width="45" height="27"></td><td>beastcoast</td><td>47</td></tr><tr><td><img src="https://cdn.datdota.com/images/862855679982708969.png" width="45" height="27"></td><td>OG</td><td>47</td></tr><tr><td><img src="https://cdn.datdota.com/images/975479762873971573.png" width="45" height="27"></td><td>INVICTUS GAMING</td><td>45</td></tr><tr><td><img src="https://cdn.datdota.com/images/255967725890131816.png" width="45" height="27"></td><td>Alliance</td><td>45</td></tr><tr><td><img src="https://cdn.datdota.com/images/1619596767758664453.png" width="45" height="27"></td><td>Undying</td><td>43</td></tr><tr><td><img src="https://cdn.datdota.com/images/1740069961068193325.png" width="45" height="27"></td><td>Virtus.pro</td><td>42</td></tr><tr><td><img src="https://cdn.datdota.com/images/1660101892780174189.png" width="45" height="27"></td><td>Elephant</td><td>39</td></tr><tr><td><img src="https://cdn.datdota.com/images/1018322454570182183.png" width="45" height="27"></td><td>Evil Geniuses</td><td>38</td></tr></tbody>
-
-            </table>
-
-        </div>
-        </div>
-        <div id="Players" class="container tabcontent">
-            <h3>Players</h3>
-        </div>
-        <div id="Heroes" class="container tabcontent">
-            <h3>Heroes</h3>
-        </div>
-        <br>
-        <br>
-    </div>
-
-    <script type="text/javascript" src="sort-table.js"></script>
-</body>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>Chester Tan — Web Repositories — GitHub.Com</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ </head>
+ <body>
+  <div id="container">
+   <div id="content">
+   empty for now
+   <a href="\dota2">try this link?</a>
+   </div>
+  </div>
+ </body>
 </html>
